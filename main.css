@@ -1,0 +1,71 @@
+:root{
+  --bg-deep:#0d0934;
+  --bg-soft:#130d46;
+  --grad-start:#ff8a5c;
+  --grad-end:#ff6f91;
+  --text:#ffffff;
+  --text-soft:#e8e6f5;
+}
+
+body{
+  font-family:'Roboto',sans-serif;
+  color:var(--text);
+  background:var(--bg-deep);
+}
+
+/* Títulos */
+h1,h2,h3,.section-title{
+  font-family:'Orbitron',sans-serif;
+  letter-spacing:1px;
+}
+
+/* Navbar */
+.navbar{
+  background:linear-gradient(90deg,var(--bg-deep),var(--bg-soft));
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.navbar-brand{ color:var(--text); }
+.navbar-brand:hover{ color:var(--text); }
+#cabecalho .nav .nav-link{ color:var(--text-soft); }
+#cabecalho .nav .nav-link.active{
+  background:#fff; color:var(--bg-deep);
+}
+.navbar-toggler{ background-color:rgba(255,255,255,.25); }
+
+/* Carousel */
+.carousel-item img{ height:500px; object-fit:cover; }
+@media (max-width:767px){ .carousel-item img{ height:280px; } }
+
+/* Gradiente para destaques */
+.text-colored{
+  background:linear-gradient(90deg,var(--grad-start),var(--grad-end));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+/* Seções */
+#sobre,#solucoes{ background:var(--bg-soft); }
+#servicos{ background:var(--bg-deep); }
+
+/* Nav de soluções e botões */
+.nav-cardapio .nav-link.active,
+#contato button{
+  background:linear-gradient(90deg,var(--grad-start),var(--grad-end));
+  color:#fff; border:none;
+}
+.nav-cardapio .nav-link{ color:var(--text-soft); }
+.nav-cardapio .nav-link:hover{ color:#fff; }
+
+/* Utilidades */
+.rounded{ border-radius:.75rem!important; }
+img.d-block.w-100{ border-radius:.5rem; }
+.social-links li{ list-style:none; display:inline-flex; }
+.social-links a{ text-decoration:none; }
+
+/* Hover suave nos ícones (com JS ou sem JS) */
+.social-links i{
+  display:inline-block;
+  transition:transform .25s ease;
+  will-change:transform;
+}
